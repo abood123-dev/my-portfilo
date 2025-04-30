@@ -13,7 +13,7 @@ const Nav = () => {
       ]
       const pathname=usePathname();
   return (
-    <div className='flex flex-row items-center gap-10'>
+    <div className='flex flex-row items-center gap-8 text-sm'>
       {links.map((link,index)=>
       {
         return(

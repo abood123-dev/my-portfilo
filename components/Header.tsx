@@ -3,9 +3,9 @@ import React from 'react';
 import Nav from './Nav';
 const Header = () => {
   return (
-    <div className='flex flex-row justify-center gap-[550px] items-center mt-3'>
+    <div className='flex flex-row justify-center gap-[500px] items-center mt-4'>
         <Link href='/'> 
-        <div className='text-white font-semibold text-3xl'>Abood<span className='text-4xl text-[#00ff99]'>.</span> </div>
+        <div className='text-white font-bold text-2xl'>Abood<span className='text-4xl text-[#00ff99]'>.</span> </div>
         </Link>
         <Nav/>
     </div>
