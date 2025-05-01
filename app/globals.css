@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
 :root {
   --font-jetbrainMono: 'JetBrains Mono', monospace;
 }
@@ -9,4 +7,6 @@ body {
   font-family: var(--font-jetbrainMono);
   background-color: #1c1c22;
 }
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

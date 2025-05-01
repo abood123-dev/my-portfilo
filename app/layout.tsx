@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 const JetBrainsMono= JetBrains_Mono({
    subsets:['latin'],
    weight:['100','200','300','400','500','600','700','800'],
-   variable:'--font-jetbrainMono'
+   variable:'--font-jetbrainMono',
+   display:"swap"
 })
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,7 +28,7 @@ export default function RootLayout({
       <body className={JetBrainsMono.variable}>
         <Header/>
         <Staireffect/>
-        <PageTransition> {children}</PageTransition>
+        <PageTransition>{children}</PageTransition>
         </body>
     </html>
   );

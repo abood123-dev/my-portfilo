@@ -1,9 +1,11 @@
 "use client";
-import Link from 'next/link';
 import React from 'react';
-import { Button } from './ui/button';
+import { Sheet, SheetTrigger, SheetContent } from './ui/sheet';
+import { CiMenuFries } from 'react-icons/ci';
 import { usePathname } from 'next/navigation';
-const Nav = () => {
+import Link from 'next/link';
+import { Button } from './ui/button';
+const MobileNav = () => {
     const links=[
         { href: '/', label: 'Home' },
         { href: '/services', label: 'Services' },
@@ -13,7 +15,15 @@ const Nav = () => {
       ]
       const pathname=usePathname();
   return (
-    <div className='md:flex md:flex-row md:items-center md:gap-8 md:text-sm hidden '>
+    <Sheet>
+      <SheetTrigger asChild className='focus:outline-none'>
+        <button className="flex justify-center items-center">
+          <CiMenuFries className="text-4xl text-[#00ff99]" />
+        </button>
+      </SheetTrigger>
+      <SheetContent side="right" className='w-[310px] flex flex-col gap-44 font-bold justify-center items-center text-white'>
+        <div className='text-white font-bold text-2xl'>Abood<span className='text-4xl text-[#00ff99]'>.</span></div> 
+        <div className='flex flex-col items-center gap-10  '>
       {links.map((link,index)=>
       {
         return(
@@ -30,7 +40,10 @@ const Nav = () => {
       <Button className='focus:outline-none'>Hire me</Button>
       </Link>
     </div>
-  )
-}
+      </SheetContent>
+    </Sheet>
+  );
+};
 
-export default Nav
+export default MobileNav;
+
