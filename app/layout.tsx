@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Nav from "@/components/Nav";
 import PageTransition from "@/components/pageTransition";
 import Staireffect from "@/components/Staireffect";
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 const JetBrainsMono= JetBrains_Mono({
    subsets:['latin'],
@@ -25,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>        
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <body className={JetBrainsMono.variable}>
         <Header/>
         <Staireffect/>

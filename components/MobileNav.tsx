@@ -25,9 +25,8 @@ const MobileNav = () => {
             }
             else
             {
-              setMobile(false)
+              setMobile(false);
             }
-
         },[])
   return (
     <Sheet>
