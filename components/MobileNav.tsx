@@ -15,9 +15,11 @@ const MobileNav = () => {
         { href: '/contact', label: 'Contact' },        
       ]
       const pathname=usePathname();
+      
       useEffect(()=>
         {
-          if((window.innerWidth < 640))
+          const width:number =window.innerWidth;    
+          if((width < 640))
             {
               setMobile(true);
             }
@@ -26,7 +28,7 @@ const MobileNav = () => {
               setMobile(false)
             }
 
-        },[window.innerWidth])
+        },[])
   return (
     <Sheet>
       <SheetTrigger asChild className='focus:outline-none'>
