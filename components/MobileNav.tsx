@@ -1,11 +1,12 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Sheet, SheetTrigger, SheetContent } from './ui/sheet';
 import { CiMenuFries } from 'react-icons/ci';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from './ui/button';
 const MobileNav = () => {
+  const [Mobile,setMobile]=useState<boolean>(false);
     const links=[
         { href: '/', label: 'Home' },
         { href: '/services', label: 'Services' },
@@ -14,6 +15,18 @@ const MobileNav = () => {
         { href: '/contact', label: 'Contact' },        
       ]
       const pathname=usePathname();
+      useEffect(()=>
+        {
+          if((window.innerWidth < 640))
+            {
+              setMobile(true);
+            }
+            else
+            {
+              setMobile(false)
+            }
+
+        },[window.innerWidth])
   return (
     <Sheet>
       <SheetTrigger asChild className='focus:outline-none'>
@@ -21,9 +34,9 @@ const MobileNav = () => {
           <CiMenuFries className="text-4xl text-[#00ff99]" />
         </button>
       </SheetTrigger>
-      <SheetContent side="right" className='w-[310px] flex flex-col gap-44 font-bold justify-center items-center text-white'>
+      <SheetContent side={Mobile ? "right" : 'left'} className='md:w-[310px] w-[220px] flex flex-col md:gap-44 gap-16 font-bold md:justify-center justify-start items-center text-white'>
         <div className='text-white font-bold text-2xl'>Abood<span className='text-4xl text-[#00ff99]'>.</span></div> 
-        <div className='flex flex-col items-center gap-10  '>
+        <div className='flex flex-col items-center md:gap-10 gap-7'>
       {links.map((link,index)=>
       {
         return(
