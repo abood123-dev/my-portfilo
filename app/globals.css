@@ -10,3 +10,14 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-outline
+{
+  -webkit-text-stroke: 1px #ffffff;
+  transition:  0.3s ease-out ;
+  cursor: pointer;
+}
+.text-outline:hover
+{
+  -webkit-text-stroke: 1px #00ff99;
+}
