@@ -6,6 +6,7 @@
 body {
   font-family: var(--font-jetbrainMono);
   background-color: #1c1c22;
+  overflow-x: hidden;
 }
 @tailwind base;
 @tailwind components;
