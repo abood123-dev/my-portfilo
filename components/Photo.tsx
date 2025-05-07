@@ -8,7 +8,7 @@ const Photo = () => {
     <div>
         <motion.div initial={{opacity:0}} animate={{opacity:1,transition:{ease:easeInOut,duration:0.4,delay:2}}}>
       <Image src="/IMG_٢٠٢٥٠٣٣١_١٦٢٠٠٥.jpg" alt='' width={350} height={350} className='relative md:w-[350px] md:h-[350px] w-[180px] h-[180px] border-none rounded-full  mix-blend-lighten object-cover md:mr-0 mr-2'/>
-      <motion.svg className='md:w-[450px] md:h-[500px] w-[250px] h-[300px] absolute md:bottom-6 md:right-12 top-[70px] right-[67px] '
+      <motion.svg className='md:w-[450px] md:h-[500px] w-[250px] h-[300px] absolute md:bottom-6 md:right-12 top-[70px] right-[57px] '
       fill='transparent'
       viewBox='0 0 586 586'
       xmlns='http://www.w3.org/2000/svg'

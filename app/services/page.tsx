@@ -28,13 +28,13 @@ const page = () => {
   return (
     <>
     <motion.div initial={{opacity:0}} animate={{opacity:1,transition:{duration:0.4,delay:2.0,ease:easeInOut}}}>
-    <div className='grid grid-cols-2 gap-[30px] items-center ml-[100px] mt-[50px] mb-10 text-white'>
+    <div className='md:grid md:grid-cols-2 md:gap-[30px]  flex flex-col gap-10 items-start ml-[10px] md:items-center md:ml-[100px] mt-[50px] mb-10 text-white'>
     {services.map((service,index)=>
       {
         return(
-         <div key={index} className='w-[450px]'>
-               <div className='text-5xl font-extrabold text-outline text-transparent'>{service.num}</div>
-               <div className='font-bold text-[35px]'>{service.title}</div>
+         <div key={index} className='md:w-[450px] w-[300px]'>
+               <div className='md:text-5xl md:font-extrabold text-3xl font-bold text-outline text-transparent mb-5 md:mb-0'>{service.num}</div>
+               <div className='md:font-bold md:text-[35px] font-normal text-[20px] mb-5 md:mb-0'>{service.title}</div>
                <div>{service.desc}</div>
                <div className='border-b border-white/20 w-full p-[10px]'></div>              
          </div>
