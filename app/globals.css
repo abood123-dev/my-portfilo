@@ -1,16 +1,16 @@
-
-:root {
-  --font-jetbrainMono: 'JetBrains Mono', monospace;
-}
-
-body {
-  font-family: var(--font-jetbrainMono);
-  background-color: #1c1c22;
-  overflow-x: hidden;
-}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --font-jetbrainMono: 'JetBrains Mono', monospace !important;
+}
+
+body {
+  font-family: var(--font-jetbrainMono), 'JetBrains Mono', monospace;
+  background-color: #1c1c22;
+  overflow-x: hidden;
+}
+
 
 .text-outline
 {

@@ -25,11 +25,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={JetBrainsMono.variable} >
       <Head>        
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <body className={JetBrainsMono.variable}>
+      <body>
         <Header/>
         <Staireffect/>
         <PageTransition>{children}</PageTransition>

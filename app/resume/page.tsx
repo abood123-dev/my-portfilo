@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {FaCss3,FaReact,FaJs,FaHtml5 } from 'react-icons/fa';
 import {SiNextdotjs,SiTailwindcss,SiTypescript} from "react-icons/si";
 import { Tooltip , TooltipContent,TooltipTrigger,TooltipProvider } from '@/components/ui/tooltip';
