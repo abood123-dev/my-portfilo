@@ -59,8 +59,15 @@ const page = () => {
     <motion.div initial={{opacity:0}} animate={{opacity:1, transition:{
       delay:2.4,duration:0.4,ease:easeInOut
     }}}>
-       <div className='flex md:flex-row md:gap-[120px] items-center justify-center md:-ml-12 flex-col-reverse'>        
-        <div className='flex flex-col items-start gap-3 w-[600px] ml-28 mt-10'>
+       {Swipe ? (
+          <div className="absolute inline-block md:top-24 md:left-[900px] top-24 left-[100px]" >
+      <div className="absolute md:-bottom-2   w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-b-gray-200" />
+      <div className="bg-transparent text-[#00ff99] border border-white/20 p-4 rounded-md shadow-md">
+        Swipe to see more projects!
+      </div>
+      </div>) : null}
+       <div className='flex md:flex-row md:gap-[120px] flex-col-reverse gap-[5px] items-center justify-center md:-ml-12 md:mb-5'>        
+        <div className={`flex flex-col items-start gap-3 md:w-[600px] w-[300px] md:ml-28 -ml-10 md:mt-10 ${!Swipe ? 'sm:-mt-[400px]' : ''}`}>
              <div className='md:text-5xl md:font-extrabold text-3xl font-bold text-outline text-transparent mb-5 md:mb-0'>{project.num}</div>
              <div className='text-white font-extrabold text-[30px] capitalize'>{project.category}</div>
              <div className='text-gray-400 font-normal text-[15px]'>{project.description}</div>
@@ -109,17 +116,11 @@ const page = () => {
               </div>
             </div>
                
-        {Swipe && (
-          <div className="relative inline-block -mt-[325px] -mr-[495px]" >
-      <div className="absolute -bottom-2 left-5 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-b-gray-200" />
-      <div className="bg-transparent text-[#00ff99] border border-white/20 p-4 rounded-md shadow-md">
-        Swipe to see more projects!
-      </div>
-      </div>)}
+       
       
        
         
-             <div className="w-[370px] h-[230px] mx-auto overflow-hidden">
+             <div className="md:w-[370px] md:h-[230px] w-[350px] h-[400px] mx-auto overflow-hidden">
          
   <Swiper
     spaceBetween={30}
@@ -133,12 +134,12 @@ const page = () => {
               
                setswipe(false)
               
-              } className="relative w-full h-full">
+              } className="relative w-full h-full md:mt-0 mt-[20px]">
           <Image
             src={project.image}
             alt=""
             fill
-            className="  object-fill"
+            className=" md:object-fill  object-contain"
             unoptimized
           />
         </div>
