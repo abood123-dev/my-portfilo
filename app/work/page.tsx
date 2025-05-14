@@ -84,7 +84,7 @@ const page = () => {
               })}
               </div>
               <div className='border border-white/20 w-full'></div>
-              <div className='flex flex-row gap-5'>
+              <div className='flex flex-row gap-5 md:mb-0 mb-10'>
                 <Link href={project.live} legacyBehavior>
                  <a target="_blank" rel="noopener noreferrer">
                  <TooltipProvider delayDuration={100}>
