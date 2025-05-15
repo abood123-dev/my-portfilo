@@ -60,7 +60,7 @@ const page = () => {
       delay:2.4,duration:0.4,ease:easeInOut
     }}}>
        {Swipe ? (
-          <div className="absolute inline-block md:top-24 md:left-[900px] top-24 left-[100px]" >
+          <div className="absolute inline-block md:top-24 md:left-[900px] top-20 left-[100px]" >
       <div className="absolute md:-bottom-2   w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-b-gray-200" />
       <div className="bg-transparent text-[#00ff99] border border-white/20 p-4 rounded-md shadow-md">
         Swipe to see more projects!

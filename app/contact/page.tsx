@@ -47,7 +47,7 @@ const page = () => {
   ]
   return (
     <form onSubmit={handleSubmit} className='flex md:flex-row flex-col-reverse   justify-center items-center gap-20 mt-10 mb-10'>  
-    <div className='flex flex-col items-start justify-center gap-[20px] bg-[#27272c] md:w-[640px] w-[400px] py-[50px] md:px-[20px] px-[10px]'>
+    <div className='flex flex-col items-start justify-center gap-[20px] bg-[#27272c] md:w-[640px] w-[350px] py-[50px] md:px-[20px] px-[10px]'>
          <div className='text-[#00ff99] text-2xl font-extrabold'>Let's work together</div>
          <div className='text-white/60 text-sm font-normal'>Interested in working together or want to learn more about my work? Drop me a message — I'd love to hear from you.</div>
          <div className='flex md:flex-row flex-col justify-center items-center md:gap-8 gap-4'>
